@@ -31,6 +31,20 @@ You can also specify the Bluetooth address directly (which is a lot faster):
 
 `python3 sketcher.py --adr 11:22:33:44:55:66 sendimage dog.jpg`
 
+### Quick test harness
+
+You can validate the RGB565 packing logic without any Bluetooth hardware:
+
+`python3 -m unittest test_rgb565_utils.py`
+
+You can also run the same check through the CLI:
+
+`python3 sketcher.py selftest`
+
+To scan nearby BLE devices and look for the projector address:
+
+`python3 sketcher.py scan`
+
 **Requirements:**
 
 The required Python packages can be seen in the usual `requirements.txt` file:
